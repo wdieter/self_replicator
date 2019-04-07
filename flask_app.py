@@ -73,7 +73,12 @@ def get_user_profile(session):
 
 def create_repo(session):
     """forks the repository to the user's github using the authenticated session"""
-    response = session.post("https://api.github.com/repos/wdieter/self_replicator/forks")
+    repo_name = 'self_replicator'
+    repo_owner = 'wdieter'
+    api_base_minus_slash = base_api_url[:-1]
+    post_fork_url = '/'.join((api_base_minus_slash, 'repos', repo_owner, repo_name, 'forks'))
+    # post_fork_url should look like "https://api.github.com/repos/wdieter/self_replicator/forks"
+    response = session.post(post_fork_url)
     return response.text
 
 
