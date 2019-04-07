@@ -27,6 +27,14 @@ def hello():
     return render_template('index.html')
 
 
+@application.route('/test')
+def test():
+    return f"""client_id: {client_id}
+client_secret: {client_secret}
+app_secret_key: {app_secret_key}
+"""
+
+
 @application.route('/auth')
 def get_github_user_code():
     """Step 1 of OAuth2 authentication flow
@@ -75,7 +83,7 @@ def get_user_profile(session):
 
 def create_repo(session):
     """forks the repository to the user's github using the authenticated session"""
-    response = session.post("https://api.github.com/repos/twisted/incremental/forks")
+    response = session.post("https://api.github.com/repos/wdieter/self_replicator/forks")
     return response.text
 
 
