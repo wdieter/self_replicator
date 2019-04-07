@@ -32,3 +32,9 @@ production as the domain name will not be 'localhost'.
  production setting, environment variables just need to be passed in at runtime. 
 - https needs to be enabled, currently serving http, which could be a security risk. 
 - Unit testing for both the endpoints and the api functions.
+
+#### Useful links 
+https://developer.github.com/apps/building-oauth-apps/
+
+https://developer.github.com/v3/
+
