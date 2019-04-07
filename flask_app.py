@@ -20,19 +20,9 @@ service = OAuth2Service(
     base_url=base_api_url)
 
 
-
-
 @application.route('/')
 def hello():
     return render_template('index.html')
-
-
-@application.route('/test')
-def test():
-    return f"""client_id: {client_id}
-client_secret: {client_secret}
-app_secret_key: {app_secret_key}
-"""
 
 
 @application.route('/auth')
