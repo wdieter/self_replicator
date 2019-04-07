@@ -5,7 +5,8 @@ The application triggers an [OAuth authentication flow](https://stackoverflow.co
 to get access to the user's github.
 This means the user will never provide their password to the application, and only needs to sign in to github.
 
-## Software requirements 
+## Quickstart
+#### Software requirements 
 
 To run application locally, download docker for desktop here: https://www.docker.com/products/docker-desktop
 
@@ -13,9 +14,12 @@ You can test if your installation is working by running the following in the ter
 
 ``docker run hello-world``
 
-## Running the application on local machine
 
-Only two commands are needed to run the application: 
+
+#### Running the application on local machine
+Make sure the working directory is `self_replicator`. Navigate to this directory using the `cd` command. 
+
+Then only two commands are needed to run the application: 
 ````
 docker build --tag=self_rep .
 ````
